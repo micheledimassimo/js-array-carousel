@@ -5,7 +5,7 @@
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     
    
 }
@@ -17,12 +17,14 @@ img {
 }
 
 .item {
-    width: 80%;
-
-    margin-top: 150px;
+    width: 100%;
+    display: block;
+}
+.inactive {
+    display: none;
 }
 .item > img {
-    height: 600px;
+    width: 100%;
     object-fit: cover;
     display: block;
 }
