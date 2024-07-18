@@ -38,12 +38,11 @@ for (i = 0; i < images.length; i++) {
 
 let currentImg = 1;
 const myBtnUp = document.getElementById('arrow-up');
-myBtnUp.addEventListener(
-    'click', function () {
+myBtnUp.addEventListener('click', function () {
         if (currentImg < images.length) {
-            document.querySelector('.carousel > img:nth-child(' + currentImg + ')').classList.remove("active");
+            document.querySelector('.carousel > img:nth-child(' + currentImg + ')').classList.remove('active');
             currentImg++;
-            document.querySelector('.carousel > img:nth-child(' + currentImg + ')').classList.add("active");
+            document.querySelector('.carousel > img:nth-child(' + currentImg + ')').classList.add('active');
         }
         
     }
