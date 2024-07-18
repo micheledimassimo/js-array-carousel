@@ -1,7 +1,7 @@
 console.log('JS collegato');
 
 //inizializzo array con percorso alle immagini
-
+const carousel = document.querySelector('.carousel');
 const images = [
     'img/01.webp',
     'img/02.webp',
@@ -13,8 +13,8 @@ const images = [
 
 //aggiungo elementi all'html
 
-const carousel = document.querySelector('.carousel');
-let i 
+
+
 /* carosel.innerHTML += `
     <div class="item"> 
         <img src="${percorso immagine}">
@@ -24,25 +24,38 @@ let i
 
 
 for (i = 0; i < images.length; i++) {
-    carousel.innerHTML += `
-    <div class="item inactive"> 
-        <img src="${images[i]}">
-    </div> 
-    `
-    let j = i;
-    if (j >= 1) {
-        let active = document.querySelector('.item');
-        active.classList.remove("inactive");
-       } 
+    if (i == 0) {
+        carousel.innerHTML += `<img src="${images[i]}" class="active">`;
+    }
+    else {
+        carousel.innerHTML += `<img src="${images[i]}">`;
+    }    
+
+    
 };
 
-/*  */
 
 
-/* const myBtn = document.querySelector(#btn);
-myBtn.addEventListener(
-    'click'
-    function {
-
+let currentImg = 1;
+const myBtnUp = document.getElementById('arrow-up');
+myBtnUp.addEventListener(
+    'click', function () {
+        if (currentImg < images.length) {
+            document.querySelector('.carousel > img:nth-child(' + currentImg + ')').classList.remove("active");
+            currentImg++;
+            document.querySelector('.carousel > img:nth-child(' + currentImg + ')').classList.add("active");
+        }
+        
     }
-) */
+);
+const myBtnDown = document.getElementById('arrow-down');
+myBtnDown.addEventListener(
+    'click', function () {
+        if (currentImg < images.length) {
+            document.querySelector('.my-container > .carousel > img:nth-child(' + currentImg + ')').classList.remove("active");
+            currentImg--;
+            document.querySelector('.my-container > .carousel > img:nth-child(' + currentImg + ')').classList.add("active");
+        }
+        
+    }
+);
