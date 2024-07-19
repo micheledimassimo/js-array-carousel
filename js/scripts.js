@@ -40,9 +40,9 @@ let currentImg = 1;
 const myBtnUp = document.getElementById('arrow-up');
 myBtnUp.addEventListener('click', function () {
         if (currentImg < images.length) {
-            document.querySelector('.carousel > img:nth-child(' + currentImg + ')').classList.remove('active');
+            document.querySelector('.carousel > img:nth-child(' + currentImg + ')').classList.remove('.active');
             currentImg++;
-            document.querySelector('.carousel > img:nth-child(' + currentImg + ')').classList.add('active');
+            document.querySelector('.carousel > img:nth-child(' + currentImg + ')').classList.add('.active');
         }
         
     }
@@ -50,7 +50,7 @@ myBtnUp.addEventListener('click', function () {
 const myBtnDown = document.getElementById('arrow-down');
 myBtnDown.addEventListener(
     'click', function () {
-        if (currentImg < images.length) {
+        if (currentImg > 1) {
             document.querySelector('.my-container > .carousel > img:nth-child(' + currentImg + ')').classList.remove("active");
             currentImg--;
             document.querySelector('.my-container > .carousel > img:nth-child(' + currentImg + ')').classList.add("active");
