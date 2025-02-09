@@ -40,9 +40,9 @@ let currentImg = 1;
 const myBtnUp = document.getElementById('arrow-up');
 myBtnUp.addEventListener('click', function () {
         if (currentImg < images.length) {
-            document.querySelector('.carousel > img:nth-child(' + currentImg + ')').classList.remove('.active');
+            document.querySelectorAll('.carousel > img:nth-child(' + currentImg + ')').classList.remove('.active');
             currentImg++;
-            document.querySelector('.carousel > img:nth-child(' + currentImg + ')').classList.add('.active');
+            document.querySelectorAll('.carousel > img:nth-child(' + currentImg + ')').classList.add('.active');
         }
         
     }
@@ -51,9 +51,9 @@ const myBtnDown = document.getElementById('arrow-down');
 myBtnDown.addEventListener(
     'click', function () {
         if (currentImg > 1) {
-            document.querySelector('.my-container > .carousel > img:nth-child(' + currentImg + ')').classList.remove("active");
+            document.querySelectorAll('.my-container > .carousel > img:nth-child(' + currentImg + ')').classList.remove("active");
             currentImg--;
-            document.querySelector('.my-container > .carousel > img:nth-child(' + currentImg + ')').classList.add("active");
+            document.querySelectorAll('.my-container > .carousel > img:nth-child(' + currentImg + ')').classList.add("active");
         }
         
     }
